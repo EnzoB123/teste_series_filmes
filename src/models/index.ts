@@ -1,1 +1,2 @@
-export * from './usuario.model';
+export * from './user.model';
+export * from './movies.model';
