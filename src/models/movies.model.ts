@@ -7,7 +7,7 @@ export class Movies extends Entity {
     id: true,
     generated: true,
   })
-  id?: string;
+  movieId?: string;
 
   @property({
     type: 'string',
@@ -16,9 +16,22 @@ export class Movies extends Entity {
   title: string;
 
   @property({
-    type: 'string',
+    type: 'array',
+    itemType: 'string',
   })
-  rating?: string;
+  liked?: string[];
+
+  @property({
+    type: 'array',
+    itemType: 'string',
+  })
+  disliked?: string[];
+
+  @property({
+    type: 'array',
+    itemType: 'string',
+  })
+  followers?: string[];
 
   // Define well-known properties here
 

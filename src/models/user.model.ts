@@ -9,7 +9,7 @@ export class User extends Entity {
     generated: true,
     mongodb: { dataType: 'ObjectId' }
   })
-  id?: string;
+  userId?: string;
 
   @property({
     type: 'string',
@@ -35,12 +35,12 @@ export class User extends Entity {
     defaultFn: 'now',
     mongodb: { dataType: 'Date' }
   })
-  data_criacao?: Date;
+  dataCriacao?: Date;
 
   @property({
     type: 'date',
   })
-  data_atualizacao?: string;
+  dataAtualizacao?: string;
 
   @property({
     type: 'array',

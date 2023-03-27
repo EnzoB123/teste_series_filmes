@@ -21,10 +21,8 @@ import {
 import {User} from '../models';
 import {UserRepository} from '../repositories';
 
-import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
 import { Credentials } from '@loopback/authentication-jwt';
-import { use } from 'should';
 
 export class UserController {
   constructor(
@@ -204,15 +202,15 @@ export class UserController {
 
     //if (!isPasswordMatched) {
 
-    if (isPasswordMatched !== 0) {  
+    if (isPasswordMatched !== 0) {
       throw new HttpErrors.Unauthorized('Invalid email or password.');
     }
     // Generate a new access token
 
-    const token = jwt.sign({userId: user.id}, 'your-secret-key');
+    const token = jwt.sign({userId: user.userId}, 'your-secret-key');
     return {token};
   }
 
-  
-  
+
+
 }
