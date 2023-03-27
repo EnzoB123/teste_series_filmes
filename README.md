@@ -1,22 +1,18 @@
 # teste_series_filmes Enzo
 
-# Como rodar a aplicação front-end:
+# Como rodar a aplicação back-end:
 
-1.Instale a versao mais estável do node.js: https://nodejs.dev/pt/download/
+1.Certifique-se de ter o Node.js versão (14.19 pra cima) e o MongoDB instalados em sua máquina.
 
-2.Certifique-se de ter o Node.js e o MongoDB instalados em sua máquina.
+2.Faça o clone do repositório da API.
 
-3.Faça o clone do repositório da API.
+3.Abra o terminal no diretório da API.
 
-4.Abra o terminal no diretório da API.
+4.Execute o comando npm install para instalar as dependências do projeto.
 
-5.Execute o comando npm install para instalar as dependências do projeto.
+5.Execute o comando "npm start" para iniciar o servidor da API. A API deve estar disponível em http://localhost:3000/.
 
-6.Execute o comando "quasar dev" para iniciar o servidor da API. A API deve estar disponível em http://localhost:3000/ ou http://localhost:9000/.
-
-7.Se algo ocorrer errado com o "quasar dev", instale tambem o quasar diretamente: npm install -g @quasar/cli
-
-8.Agora certifique-se que o servidor api está rodando, pode fazer um ping, acessando: http://localhost:3000/ping
+6.Agora certifique-se que o servidor api está rodando, pode fazer um ping, acessando: http://localhost:3000/ping
 
 
 
