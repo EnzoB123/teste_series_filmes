@@ -31,12 +31,12 @@ export class MovieController {
         'application/json': {
           schema: getModelSchemaRef(Movies, {
             title: 'NewMovies',
-            exclude: ['movieId'],
+            exclude: ['movieId', 'userId'],
           }),
         },
       },
     })
-    movies: Omit<Movies, 'movieId'>,
+    movies: Omit<Movies, 'movieId' | 'userId'>,
   ): Promise<Movies> {
     return this.userRepository.create(movies);
   }
@@ -142,17 +142,7 @@ export class MovieController {
     await this.userRepository.deleteById(movieId);
   }
 
-  // Add a user's movieId to the likes array of a movie
-  @post('/movies/{movieId}/likes/{userId}')
-  async likeMovie(
-    @param.path.string('movieId') movieId: string,
-    @param.path.string('userId') userId: string,
-  ): Promise<Movies> {
-    const movie = await this.userRepository.findById(movieId);
-    movie.likes.push(userId);
-    await this.userRepository.update(movie);
-    return movie;
-  }
+
 
 
 }

@@ -13,6 +13,12 @@ export class Movies extends Entity {
     type: 'string',
     required: true,
   })
+  userId: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
   title: string;
 
   @property({
